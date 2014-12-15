@@ -35,22 +35,37 @@ Scissors cut paper. Paper covers rock. Rock crushes lizard. Lizard poisons Spock
 // between the computer's choice and the player's choice
 // and use module arithmetic to computer the difference
 
-
-// helper functions
-
-
-
+// global variables
+var name = "";
 
   // convert player's choice name to a number
 
+  // the name will be player's choice
+  // below is just the code for assigning a number to the name variable
+  // it will need to go in a function that will be called when the game starts
 
+  switch (name) {
+    case "rock":
+      name = 0;
+      break;
+    case "spock":
+      name = 1;
+      break;
+    case "paper":
+      name = 2;
+      break;
+    case "lizard":
+      name = 3;
+      break;
+    case "scissors":
+      name = 4;
+      break;
+    default:
+      // ultimately, this statement will not go to the console
+      console.log("That is not one of the options. Please choose only rock, paper, scissors, lizard, or Spock.");
+  }
+              
   // convert computer's number to a name
 
 
-
-
-
-
 // the game
-
-display_rules();
