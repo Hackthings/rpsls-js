@@ -68,29 +68,26 @@ function number_to_name(computer_number){
     
     var computer_name;
     
-    switch (computer_number) {
-    case 0:
+    if (computer_number === 0) {
       computer_name = "rock";
-      break;
-    case 1:
-      computer_name = "Spock";
-      break;
-    case 2:
-      computer_name = "paper";
-      break;
-    case 3:
-      computer_name = "lizard";
-      break;
-    case 4:
-      computer_name = "scissors";
-      break;
-    default:
-      // temporarily sending output to console
-      console.log("Error! The computer has chosen a number other than 0, 1, 2, 3, or 4. There must be something wrong with the random number generator.");
-  }
-    return computer_name;
+      return computer_name;
+    } else if (computer_number === 1){
+        computer_name = "Spock";
+        return computer_name;
+    } else if (computer_number === 2){
+        computer_name = "paper";
+        return computer_name;
+    } else if (computer_number === 3){
+        computer_name = "lizard";
+        return computer_name;
+    } else if (computer_number === 4){
+        computer_name = "scissors";
+        return computer_name;
+    } else {
+              // temporarily sending output to console (error msg)
+      console.log("Error! The computer has chosen a number other than 0, 1, 2, 3, or 4. There must be something wrong with the random number generator.");      
+    }
 }
-
 
 // GAME CODE
 // funning this function will initiate the game
