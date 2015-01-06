@@ -132,7 +132,8 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 { 
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  color: #CCC;
   font-weight: 300; }
 h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
 h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
@@ -281,25 +282,6 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
-
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul { 
-  list-style: circle inside; }
-ol { 
-  list-style: decimal inside; }
-ol, ul {
-  padding-left: 0;
-  margin-top: 0; }
-ul ul, 
-ul ol,
-ol ol, 
-ol ul { 
-  margin: 1.5rem 0 1.5rem 3rem; 
-  font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
 
 
 /* Code
