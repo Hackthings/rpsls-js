@@ -1,3 +1,28 @@
+// "How to Play" Lightbox Display
+
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+
+$overlay.append($image);
+
+$("body").append($overlay);
+
+// Capture click event on "How to Play" button
+$("#rules").click(function(event) {
+  event.preventDefault();
+  var imageLocation = $(this).attr("href");
+  // Update overlay with rules image
+  $image.attr("src", imageLocation);
+  // Show the overlay
+  $overlay.show();
+});
+
+// Hide overlay when clicked
+$overlay.click(function() {
+  $overlay.hide();
+});
+
+
 // ROCK PAPER LIZARD SCISSORS SPOCK GAME
 // (Player vs. Computer)
 
