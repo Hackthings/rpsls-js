@@ -26,40 +26,36 @@ $overlay.click(function() {
 // ROCK PAPER LIZARD SCISSORS SPOCK GAME
 // (Player vs. Computer)
 
-/* This code was originally developed in Python and based on tutorials from Rice University's Coursera Course called Interactive Programming in Python course 
-(https://www.coursera.org/course/interactivepython).
-
-The rules of the game:
-
-Scissors cut paper. Paper covers rock. Rock crushes lizard. Lizard poisons Spock. Spock smashes scissors. Scissors decapitate lizard. Lizard eats paper. Paper disproves Spock. Spock vaporizes rock. Rock crushes scissors.
-
-The key idea of this program is to equate the strings
-"rock", "paper", "scissors", "lizard", "Spock" to numbers, as follows, and use modular arithmetic to determine which item beats the other:
-
-0 - rock
-1 - Spock
-2 - paper
-3 - lizard
-4 - scissors
-
-Each item will beat the item that comes before it
-and be vanquished by the item that comes afer.
-For example, paper beats Spock but is defeated by lizard. 
-
-What about scissors vs. rock or rock vs. paper? If we imagine these numbers on a clock, with the rock in the 12 o'clock position (0), you can determine the winner like so:
-
----You always beat counterclockwise opponents.
----You lose to clockwise opponents.
-
-To mathematically determine the winner, you subtract the second item from the first item. 
-If the difference is 1 or 2, the first item wins.
-If the difference is 3 or 4, the second item wins. 
-
-We can avoid the problems caused by negative numbers by using the modulo operator.  For example, if the player chooses paper and the computer chooses scissors, we have 2-4 = -2. We then look at the modulo 5 of the answer to determine the difference.  -2 % 5 = 3, and thus, scissors beats paper.
-
-For an explanation of modular arithmetic, visit http://www.artofproblemsolving.com/Wiki/index.php/Modular_arithmetic/Introduction. 
-*/
-
+//  convert button click to player's choice (player_name)
+  
+  var player_name = "";
+  // event listeners trigger game 
+  
+  $('#rock').click(function(){
+    player_name = "rock";
+    console.log("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+  });
+  $('#paper').click(function(){
+    player_name = "paper";
+    console.log("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+  });
+  $('#scissors').click(function(){
+    player_name = "scissors";
+    console.log("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+  });
+  $('#lizard').click(function(){
+    player_name = "lizard";
+    console.log("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+  });
+  $('#spock').click(function(){
+    player_name = "spock";
+    console.log("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+  }); 
 
 // HELPER FUNCTIONS
 
@@ -115,19 +111,15 @@ function number_to_name(computer_number){
 }
 
 // GAME CODE
-// funning this function will initiate the game
+// triggered by image/button click
 
-function rpsls_game() {
+function rpsls_game(player_name) {
     var computer_choice;
     var difference;
     var player_number;
-    var player_name;
-
-
-    // get and convert player's choice (player_name) to player_number using the function name_to_number()
-    player_name= prompt("Please enter your choice: rock, paper, scissors, lizard, Spock.   ");
-    console.log("You have chosen " + player_name + ".");
-    player_number = name_to_number(player_name);   
+  
+    // convert player's choice (player_name) to player_number using the function name_to_number()
+    player_number = name_to_number(player_name); 
     
     // compute random guess for computer_number using random.randrange()
     var computer_number = Math.floor(Math.random(0, 5) * 5);
@@ -140,8 +132,7 @@ function rpsls_game() {
     
     /// compute difference between computer_number and player_number modulo 5
 
-// since JavaScript does not do true modular arithmetic and because its % operator is not a true modular operator, I have to do it the hard way: [Dividend-{Math.floor(Dividend/Divisor)*Divisor}]
-    
+// Unlike Python, JavaScript does not have a true modular operator. Instead, you have to do use this formula:  [Dividend-{Math.floor(Dividend/Divisor)*Divisor}] 
     
     difference = ((player_number-computer_number)-(Math.floor((player_number-computer_number)/5)*5));
     
@@ -155,4 +146,37 @@ function rpsls_game() {
     }
 }
 
-rpsls_game();
+
+/* This code was originally developed in Python and based on tutorials from Rice University's Coursera Course called Interactive Programming in Python course 
+(https://www.coursera.org/course/interactivepython).
+
+The rules of the game:
+
+Scissors cut paper. Paper covers rock. Rock crushes lizard. Lizard poisons Spock. Spock smashes scissors. Scissors decapitate lizard. Lizard eats paper. Paper disproves Spock. Spock vaporizes rock. Rock crushes scissors.
+
+The key idea of this program is to equate the strings
+"rock", "paper", "scissors", "lizard", "Spock" to numbers, as follows, and use modular arithmetic to determine which item beats the other:
+
+0 - rock
+1 - Spock
+2 - paper
+3 - lizard
+4 - scissors
+
+Each item will beat the item that comes before it
+and be vanquished by the item that comes afer.
+For example, paper beats Spock but is defeated by lizard. 
+
+What about scissors vs. rock or rock vs. paper? If we imagine these numbers on a clock, with the rock in the 12 o'clock position (0), you can determine the winner like so:
+
+---You always beat counterclockwise opponents (paper beats Spock and rock).
+---You lose to clockwise opponents (paper loses to lizard and scissors).
+
+To mathematically determine the winner, you subtract the number assigned to the second item from the number assigned to the first item. 
+If the difference is 1 or 2, the first item wins.
+If the difference is 3 or 4, the second item wins. 
+
+Sometimes the difference will be a negative number. For example, if the player chooses paper and the computer chooses scissors, we have 2(scissors)-4(paper) = -2. Using modular arithmetic is required to properly determine the winner. In this case, modulo 5 will provide the correct answer.  -2 % 5 = 3, and thus, scissors beats paper.
+
+For an explanation of modular arithmetic, visit http://www.artofproblemsolving.com/Wiki/index.php/Modular_arithmetic/Introduction. 
+*/
