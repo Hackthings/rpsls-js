@@ -38,27 +38,27 @@ $overlay.click(function() {
   // event listeners trigger game 
   
   $('#rock').click(function(){
-    player_name = "rock";
+    player_name = "Rock";
     console.log("You have chosen ROCK.");
     rpsls_game(player_name);
   });
   $('#paper').click(function(){
-    player_name = "paper";
+    player_name = "Paper";
     console.log("You have chosen PAPER.");
     rpsls_game(player_name);
   });
   $('#scissors').click(function(){
-    player_name = "scissors";
+    player_name = "Scissors";
     console.log("You have chosen SCISSORS.");
     rpsls_game(player_name);
   });
   $('#lizard').click(function(){
-    player_name = "lizard";
+    player_name = "Lizard";
     console.log("You have chosen LIZARD.");
     rpsls_game(player_name);
   });
   $('#spock').click(function(){
-    player_name = "spock";
+    player_name = "Spock";
     console.log("You have chosen SPOCK.");
     rpsls_game(player_name);
   }); 
@@ -69,19 +69,19 @@ $overlay.click(function() {
 
 function name_to_number(player_name){
 
-    if(player_name === "rock") {
+    if(player_name === "Rock") {
       player_name = 0;
       return player_name;
-  } else if (player_name === "spock") {
+  } else if (player_name === "Spock") {
       player_name = 1;
       return player_name;
-  } else if (player_name === "paper") {
+  } else if (player_name === "Paper") {
       player_name = 2;
       return player_name;
-  } else if (player_name === "lizard") {
+  } else if (player_name === "Lizard") {
       player_name = 3;
       return player_name;
-  } else if (player_name === "scissors") {
+  } else if (player_name === "Scissors") {
       player_name = 4;
       return player_name;
   } else {
@@ -96,19 +96,19 @@ function number_to_name(computer_number){
     var computer_name;
     
     if (computer_number === 0) {
-      computer_name = "ROCK";
+      computer_name = "Rock";
       return computer_name;
     } else if (computer_number === 1){
-        computer_name = "SPOCK";
+        computer_name = "Spock";
         return computer_name;
     } else if (computer_number === 2){
-        computer_name = "PAPER";
+        computer_name = "Paper";
         return computer_name;
     } else if (computer_number === 3){
-        computer_name = "LIZARD";
+        computer_name = "Lizard";
         return computer_name;
     } else if (computer_number === 4){
-        computer_name = "SCISSORS";
+        computer_name = "Scissors";
         return computer_name;
     } else {
               // temporarily sending output to console (error msg)
@@ -153,9 +153,11 @@ function rpsls_game(player_name) {
     number_of_games +=1;
     console.log("RESULTS OF GAME #" + number_of_games + ":");
 // determine winner, output winner message
+    var outcome = $('.outcome h4');
     if (difference === 1 || difference === 2) {
         console.log("Player wins!");
         player_score += 1;
+        outcome.html("You win! " + player_name + " beats " + computer_choice + "!");
         console.log("Player Score: " + player_score);
         console.log("Computer Score: " + computer_score);
         console.log("\n");
@@ -163,10 +165,12 @@ function rpsls_game(player_name) {
     } else if (difference === 3 || difference === 4) {
         console.log("Computer wins!");
         computer_score +=1;
+        outcome.html("Computer wins! " + computer_choice + " beats " + player_name + "!");
         console.log("Player Score: " + player_score);
         console.log("Computer Score: " + computer_score);
         console.log("\n");
-    } else {       
+    } else {
+        outcome.html("No one wins. Try again!");
         console.log("Player and computer tie.");
         console.log("\n");
     }
