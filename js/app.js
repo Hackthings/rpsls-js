@@ -151,14 +151,6 @@ function number_to_name(computer_number){
     }
 }
 
-// reset game scores
-
-function reset(){
-    number_of_games = 0;
-    player_score = 0;
-    computer_score = 0;
-}
-
 // GAME CODE
 // triggered by image/button click
 
@@ -215,7 +207,19 @@ function rpsls_game(player_name) {
         console.log("Player and computer tie.");
         console.log("\n");
     }
+
+    // reset game scores
+
+    $('.reset').click(function() {
+        number_of_games = 0;
+        player_score = 0;
+        computer_score = 0;
+        outcome.html("");
+        wins.html(player_score);
+        losses.html(computer_score);
+    });
 }
+
 
 
 /* This code was originally developed in Python and based on tutorials from Rice University's Coursera Course called Interactive Programming in Python course
