@@ -40,26 +40,61 @@ $overlay.click(function() {
   $('#rock').click(function(){
     player_name = "Rock";
     console.log("You have chosen ROCK.");
+    // Highlight Player Choice
+    $("#paper").css("border", "");
+    $("#scissors").css("border", "");
+    $("#lizard").css("border", "");
+    $("#spock").css("border", "");
+    $(this).css("border", "solid 2px white");
+    $("#gameplay h4").text("You have chosen ROCK");
     rpsls_game(player_name);
   });
   $('#paper').click(function(){
     player_name = "Paper";
     console.log("You have chosen PAPER.");
+    // Highlight Player Choice
+    $("#rock").css("border", "");
+    $("#scissors").css("border", "");
+    $("#lizard").css("border", "");
+    $("#spock").css("border", "");
+    $(this).css("border", "solid 2px white");
+    $("#gameplay h4").text("You have chosen PAPER");
     rpsls_game(player_name);
   });
   $('#scissors').click(function(){
     player_name = "Scissors";
     console.log("You have chosen SCISSORS.");
+    // Highlight Player Choice
+    $("#rock").css("border", "");
+    $("#paper").css("border", "");
+    $("#lizard").css("border", "");
+    $("#spock").css("border", "");
+    $(this).css("border", "solid 2px white");
+    $("#gameplay h4").text("You have chosen SCISSORS");
     rpsls_game(player_name);
   });
   $('#lizard').click(function(){
     player_name = "Lizard";
     console.log("You have chosen LIZARD.");
+    // Highlight Player Choice
+    $("#rock").css("border", "");
+    $("#paper").css("border", "");
+    $("#scissors").css("border", "");
+    $("#spock").css("border", "");
+    $(this).css("border", "solid 2px white");
+    $("#gameplay h4").text("You have chosen LIZARD");
     rpsls_game(player_name);
   });
   $('#spock').click(function(){
     player_name = "Spock";
     console.log("You have chosen SPOCK.");
+    // Highlight Player Choice
+    $("#rock").css("border", "");
+    $("#paper").css("border", "");
+    $("#scissors").css("border", "");
+    $("#lizard").css("border", "");
+    $(this).css("border", "solid 2px white");
+    $("#gameplay h4").text("You have chosen SPOCK");
     rpsls_game(player_name);
   });
 
