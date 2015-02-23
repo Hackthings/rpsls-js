@@ -53,8 +53,21 @@ body {
 }
 
 #choice ul li {
-	display: inline;
-	padding-right: 10px;
+	display: inline-block;
+	padding: 6px;
+}
+
+#choice ul li img {
+	vertical-align: middle;
+}
+
+.selected {
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #242424;
+	border-radius: 100px;
+	background-color: #242424;
 }
 
 
