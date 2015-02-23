@@ -1,10 +1,38 @@
 html {
 	height: 100%;
+	font-family: 'Raleway', sans-serif;
 }
 
 body {
 	background-color: #00243d;
 	height: 100%;
+	color: #FFF;
+}
+
+.button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #CCC;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  color: #333;
+  border-color: #888;
+  outline: 0;
 }
 
 /* Choice Buttons
@@ -21,6 +49,7 @@ body {
 #choice ul {
 	margin-top: 50px;
 	list-style: none;
+	padding: 0;
 }
 
 #choice ul li {
