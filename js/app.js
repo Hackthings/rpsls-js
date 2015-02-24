@@ -39,43 +39,43 @@ $overlay.click(function() {
   // event listeners trigger game
 
   $('#rock').click(function(){
-    player_name = "Rock";
+    player_name = "ROCK";
     console.log("You have chosen ROCK.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen ROCK");
+    $("#gameplay h1").text("You have chosen ROCK.");
     rpsls_game(player_name);
   });
   $('#paper').click(function(){
-    player_name = "Paper";
+    player_name = "PAPER";
     console.log("You have chosen PAPER.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen PAPER");
+    $("#gameplay h1").text("You have chosen PAPER.");
     rpsls_game(player_name);
   });
   $('#scissors').click(function(){
-    player_name = "Scissors";
+    player_name = "SCISSORS";
     console.log("You have chosen SCISSORS.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen SCISSORS");
+    $("#gameplay h1").text("You have chosen SCISSORS.");
     rpsls_game(player_name);
   });
   $('#lizard').click(function(){
-    player_name = "Lizard";
+    player_name = "LIZARD";
     console.log("You have chosen LIZARD.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen LIZARD");
+    $("#gameplay h1").text("You have chosen LIZARD.");
     rpsls_game(player_name);
   });
   $('#spock').click(function(){
-    player_name = "Spock";
+    player_name = "SPOCK";
     console.log("You have chosen SPOCK.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen SPOCK");
+    $("#gameplay h1").text("You have chosen SPOCK.");
     rpsls_game(player_name);
   });
 
@@ -85,19 +85,19 @@ $overlay.click(function() {
 
 function name_to_number(player_name){
 
-    if(player_name === "Rock") {
+    if(player_name === "ROCK") {
       player_name = 0;
       return player_name;
-  } else if (player_name === "Spock") {
+  } else if (player_name === "SPOCK") {
       player_name = 1;
       return player_name;
-  } else if (player_name === "Paper") {
+  } else if (player_name === "PAPER") {
       player_name = 2;
       return player_name;
-  } else if (player_name === "Lizard") {
+  } else if (player_name === "LIZARD") {
       player_name = 3;
       return player_name;
-  } else if (player_name === "Scissors") {
+  } else if (player_name === "SCISSORS") {
       player_name = 4;
       return player_name;
   } else {
@@ -112,19 +112,19 @@ function number_to_name(computer_number){
     var computer_name;
 
     if (computer_number === 0) {
-      computer_name = "Rock";
+      computer_name = "ROCK";
       return computer_name;
     } else if (computer_number === 1){
-        computer_name = "Spock";
+        computer_name = "SPOCK";
         return computer_name;
     } else if (computer_number === 2){
-        computer_name = "Paper";
+        computer_name = "PAPER";
         return computer_name;
     } else if (computer_number === 3){
-        computer_name = "Lizard";
+        computer_name = "LIZARD";
         return computer_name;
     } else if (computer_number === 4){
-        computer_name = "Scissors";
+        computer_name = "SCISSORS";
         return computer_name;
     } else {
               // temporarily sending output to console (error msg)
@@ -151,6 +151,7 @@ function rpsls_game(player_name) {
 
     // output the message for computer's choice
     console.log("Computer chooses " + computer_choice + ".");
+    $("#gameplay h2").text("The computer chose " + computer_choice + ".");
 
     // compute difference between computer_number and player_number modulo 5
 
