@@ -162,9 +162,9 @@ function rpsls_game(player_name) {
     number_of_games +=1;
     console.log("RESULTS OF GAME #" + number_of_games + ":");
 // determine winner, output winner message
-    var outcome = $('.outcome h4');
-    var wins = $('.wins h4');
-    var losses = $('.losses h4');
+    var outcome = $('.outcome h2');
+    var wins = $('.wins h2');
+    var losses = $('.losses h2');
     if (difference === 1 || difference === 2) {
         console.log("Player wins!");
         player_score += 1;

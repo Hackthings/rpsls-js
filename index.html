@@ -40,22 +40,25 @@
   <div id="header">
     <img src="images/header.png" alt="Rock Paper Scissors Lizard Spock">
     <a id="rules" class="button" href="images/rules.png">How to Play</a>
+    <a id="about" class="button" href=#>About Us</a>
   </div>
 
 
   <div id="gameplay">
     <h1>Choose your weapon!</h1>
-      <div id="choice">
-        <ul>
-          <li id="rock"><a href="javascript:void(0);"><img src="images/icon-rock.png" alt="Rock"></a></li>
-          <li id="paper"><a href="javascript:void(0);"><img src="images/icon-paper.png" alt="Paper"></a></li>
-          <li id="scissors"><a href="javascript:void(0);"><img src="images/icon-scissors.png" alt="Scissors"></a></li>
-          <li id="lizard"><a href="javascript:void(0);"><img src="images/icon-lizard.png" alt="Lizard"></a></li>
-          <li id="spock"><a href="javascript:void(0);"><img src="images/icon-spock.png" alt="Spock"></a></li>
-        </ul>
-        <h2> </h2>
-      </div>
-
+    <div id="choice">
+      <ul>
+        <li id="rock"><a href="javascript:void(0);"><img src="images/icon-rock.png" alt="Rock"></a></li>
+        <li id="paper"><a href="javascript:void(0);"><img src="images/icon-paper.png" alt="Paper"></a></li>
+        <li id="scissors"><a href="javascript:void(0);"><img src="images/icon-scissors.png" alt="Scissors"></a></li>
+        <li id="lizard"><a href="javascript:void(0);"><img src="images/icon-lizard.png" alt="Lizard"></a></li>
+        <li id="spock"><a href="javascript:void(0);"><img src="images/icon-spock.png" alt="Spock"></a></li>
+      </ul>
+    </div>
+    <h2></h2>
+    <div class="outcome">
+      <h2></h2>
+    </div>
   </div>
 
   <div id=reset>
@@ -64,23 +67,16 @@
 
   <div id="score">
     <div class="wins">
-      <h3>You</h3>
-      <h4></h4>
-    </div>
-    <div class="outcome">
-      <h4></h4>
+      <h1>You</h1>
+      <h2>0</h2>
     </div>
     <div class="losses">
-      <h3>Computer</h3>
-      <h4></h4>
+      <h1>Computer</h1>
+      <h2>0</h2>
     </div>
   </div>
 
-
-<!-- for now the game just runs in the console
-to view the results, open the developer console-->
 <script src="js/app.js"></script>
-
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
