@@ -196,7 +196,10 @@ function rpsls_game(player_name) {
         number_of_games = 0;
         player_score = 0;
         computer_score = 0;
+        $("#gameplay h1").text("Choose your weapon!");
+        $("#gameplay h2").text("");
         outcome.html("");
+        $("li").removeClass("selected")
         wins.html(player_score);
         losses.html(computer_score);
     });
