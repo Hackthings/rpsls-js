@@ -39,43 +39,43 @@ $overlay.click(function() {
   // event listeners trigger game
 
   $('#rock').click(function(){
-    player_name = "ROCK";
-    console.log("You have chosen ROCK.");
+    player_name = "rock";
+    console.log("You have chosen rock.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen ROCK.");
+    $("#gameplay h1").text("You have chosen rock.");
     rpsls_game(player_name);
   });
   $('#paper').click(function(){
-    player_name = "PAPER";
-    console.log("You have chosen PAPER.");
+    player_name = "paper";
+    console.log("You have chosen paper.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen PAPER.");
+    $("#gameplay h1").text("You have chosen paper.");
     rpsls_game(player_name);
   });
   $('#scissors').click(function(){
-    player_name = "SCISSORS";
-    console.log("You have chosen SCISSORS.");
+    player_name = "scissors";
+    console.log("You have chosen scissors.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen SCISSORS.");
+    $("#gameplay h1").text("You have chosen scissors.");
     rpsls_game(player_name);
   });
   $('#lizard').click(function(){
-    player_name = "LIZARD";
-    console.log("You have chosen LIZARD.");
+    player_name = "lizard";
+    console.log("You have chosen lizard.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen LIZARD.");
+    $("#gameplay h1").text("You have chosen lizard.");
     rpsls_game(player_name);
   });
   $('#spock').click(function(){
-    player_name = "SPOCK";
-    console.log("You have chosen SPOCK.");
+    player_name = "Spock";
+    console.log("You have chosen Spock.");
     $("li").removeClass("selected")
     $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen SPOCK.");
+    $("#gameplay h1").text("You have chosen Spock.");
     rpsls_game(player_name);
   });
 
@@ -85,19 +85,19 @@ $overlay.click(function() {
 
 function name_to_number(player_name){
 
-    if(player_name === "ROCK") {
+    if(player_name === "rock") {
       player_name = 0;
       return player_name;
-  } else if (player_name === "SPOCK") {
+  } else if (player_name === "Spock") {
       player_name = 1;
       return player_name;
-  } else if (player_name === "PAPER") {
+  } else if (player_name === "paper") {
       player_name = 2;
       return player_name;
-  } else if (player_name === "LIZARD") {
+  } else if (player_name === "lizard") {
       player_name = 3;
       return player_name;
-  } else if (player_name === "SCISSORS") {
+  } else if (player_name === "scissors") {
       player_name = 4;
       return player_name;
   } else {
@@ -112,19 +112,19 @@ function number_to_name(computer_number){
     var computer_name;
 
     if (computer_number === 0) {
-      computer_name = "ROCK";
+      computer_name = "rock";
       return computer_name;
     } else if (computer_number === 1){
-        computer_name = "SPOCK";
+        computer_name = "Spock";
         return computer_name;
     } else if (computer_number === 2){
-        computer_name = "PAPER";
+        computer_name = "paper";
         return computer_name;
     } else if (computer_number === 3){
-        computer_name = "LIZARD";
+        computer_name = "lizard";
         return computer_name;
     } else if (computer_number === 4){
-        computer_name = "SCISSORS";
+        computer_name = "scissors";
         return computer_name;
     } else {
               // temporarily sending output to console (error msg)
