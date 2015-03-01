@@ -201,68 +201,39 @@ body {
 
 #about-wrapper {
 	text-align: center;
-	line-height: 1.5;
 }
 
-#about-wrapper a {
+#about-text {
+	display: inline-block;
+	margin: 0 20px;
+	background-color: #0C2538;
+	width: 900px;
+	margin: 0 auto;
+	padding: 30px 30px 30px 30px;
+	position: relative;
+	top: -40px;
+	line-height: 1.5;
+	text-align: center;
+	border: 20px solid #BCC98E;
+	border-radius: 10px;
+	/* 50% black box shadow */
+	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#about-text a {
 	color: #BCC98E;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#about-game {
-	float: left;
-	margin: 0 20px 0 40px;
-	background-color: #0C2538;
-	height: 380px;
-	width: 25%;
-	padding: 30px 30px 30px 30px;
-	position: relative;
-	top: -40px;
-	text-align: center;
-	border: 20px solid #BCC98E;
-	border-radius: 10px;
-	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+#about-text h1:nth-child(4) {
+	margin-top: 60px;
 }
 
-#about-project {
-	display: inline-block;
-	margin: 0 20px;
-	background-color: #0C2538;
-	height: 380px;
-	width: 25%;
-	margin: 0 auto;
-	padding: 30px 30px 30px 30px;
-	position: relative;
-	top: -40px;
-	text-align: center;
-	border: 20px solid #BCC98E;
-	border-radius: 10px;
-	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-#about-us {
-	float: right;
-	margin: 0 40px 0 20px;
-	background-color: #0C2538;
-	height: 380px;
-	width: 25%;
-	padding: 30px 30px 30px 30px;
-	position: relative;
-	top: -40px;
-	text-align: center;
-	border: 20px solid #BCC98E;
-	border-radius: 10px;
-	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+#about-text h1:nth-child(6) {
+	margin-top: 60px;
 }
 
 #about-bgbar {
@@ -281,6 +252,10 @@ body {
 
 	#header img {
 		width: 600px;
+	}
+
+	#about-text {
+		width: 660px;
 	}
 
 	#score {
@@ -309,6 +284,11 @@ body {
 		padding: 30px 30px;
 	}
 
+	#about-text {
+		width: 500px;
+		border: 10px solid #BCC98E;
+	}
+
 	#score {
 		height: 140px;
 		position: auto;
@@ -332,6 +312,9 @@ body {
 		font-size: 1.5em;
 	}
 
+	#about-text {
+		width: 360px;
+	}
 
 	.outcome {
 		text-align: center;
