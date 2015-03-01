@@ -146,13 +146,13 @@ function rpsls_game(player_name) {
     var losses = $('.losses h2');
     if (difference === 1 || difference === 2) {
         player_score += 1;
-        outcome.html("You win! " + player_name + " beats " + computer_choice + "!");
+        outcome.html("You win! " + player_name.charAt(0).toUpperCase() + player_name.slice(1) + " beats " + computer_choice + "!");
         wins.html(player_score);
         losses.html(computer_score);
 
     } else if (difference === 3 || difference === 4) {
         computer_score +=1;
-        outcome.html("Computer wins! " + computer_choice + " beats " + player_name + "!");
+        outcome.html("Computer wins! " + computer_choice.charAt(0).toUpperCase() + computer_choice.slice(1) + " beats " + player_name + "!");
         wins.html(player_score);
         losses.html(computer_score);
 
