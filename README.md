@@ -10,7 +10,7 @@ Rock Paper Scissors Lizard Spock by Sam Kass and Karen Bryla is licensed under a
 
 ##ABOUT US
 
-We are [Keri Nicole](https://github.com/knikki), [Tree Casiano](https://github.com/treecasiano), and [Jackson Stokes](https://github.com/JacksonStokes). We are all part of the [Code Oregon](http://codeoregon.org/) workforce training program. 
+We are [Keri Nicole](https://github.com/knikki), [Tree Casiano](https://github.com/treecasiano), and [Jackson Stokes](https://github.com/jacksonstokespdx2). We are all part of the [Code Oregon](http://codeoregon.org/) workforce training program. 
 
 
 ##ABOUT THIS PROJECT
@@ -24,15 +24,15 @@ Scissors cut paper. Paper covers rock. Rock crushes lizard. Lizard poisons Spock
 
 The key idea of this program is to equate the strings "ROCK", "PAPER", "SCISSORS", "LIZARD", and "SPOCK" to numbers, as follows, and use modular arithmetic to determine which item beats the other:
 
-0 - rock
-1 - Spock
-2 - paper
-3 - lizard
-4 - scissors
+rock = 0
+Spock = 1
+paper = 2
+lizard = 3
+scissors = 4
 
 Each item will beat the item that comes before it and be vanquished by the item that comes afer. For example, paper beats Spock but is defeated by lizard.
 
-What about scissors vs. rock or rock vs. paper? If we imagine these numbers on a clock, with the rock in the 12 o'clock position (0), you can determine the winner like so:
+But what about scissors vs. rock or rock vs. paper? If we imagine these numbers on a clock, with the rock in the 12 o'clock position (0), you can determine the winner like so:
 
 * You always beat counterclockwise opponents (paper beats Spock and rock).
 * You lose to clockwise opponents (paper loses to lizard and scissors).
