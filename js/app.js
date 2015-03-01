@@ -34,49 +34,39 @@ $overlay.click(function() {
 
 //  convert button click to player's choice (player_name)
 
-  var player_name = "";
+var player_name = "";
 
-  // event listeners trigger game
+function start_game(player_name){
+    $("li").removeClass("selected")
+    $(this).addClass("selected")
+    $("#gameplay h1").text("You have chosen " + player_name + ".");
+    rpsls_game(player_name);
+}
 
+// event listeners trigger game
   $('#rock').click(function(){
     player_name = "rock";
-    console.log("You have chosen rock.");
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen rock.");
-    rpsls_game(player_name);
+    start_game(player_name);
   });
+
   $('#paper').click(function(){
     player_name = "paper";
-    console.log("You have chosen paper.");
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen paper.");
-    rpsls_game(player_name);
+    start_game(player_name);
   });
+
   $('#scissors').click(function(){
     player_name = "scissors";
-    console.log("You have chosen scissors.");
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen scissors.");
-    rpsls_game(player_name);
+    start_game(player_name);
   });
+
   $('#lizard').click(function(){
     player_name = "lizard";
-    console.log("You have chosen lizard.");
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen lizard.");
-    rpsls_game(player_name);
+    start_game(player_name);
   });
+
   $('#spock').click(function(){
     player_name = "Spock";
-    console.log("You have chosen Spock.");
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
-    $("#gameplay h1").text("You have chosen Spock.");
-    rpsls_game(player_name);
+    start_game(player_name);
   });
 
 // HELPER FUNCTIONS
@@ -100,10 +90,7 @@ function name_to_number(player_name){
   } else if (player_name === "scissors") {
       player_name = 4;
       return player_name;
-  } else {
-           // temporarily sending output to console
-      console.log("That is not one of the options. Please choose only rock, paper, scissors, lizard, or Spock.");
-  }
+  } 
 }
 
   // convert computer's number to a name
@@ -126,14 +113,10 @@ function number_to_name(computer_number){
     } else if (computer_number === 4){
         computer_name = "scissors";
         return computer_name;
-    } else {
-              // temporarily sending output to console (error msg)
-      console.log("Error! The computer has chosen a number other than 0, 1, 2, 3, or 4. There must be something wrong with the random number generator.");
-    }
+    } 
 }
 
 // GAME CODE
-// triggered by image/button click
 
 function rpsls_game(player_name) {
     var computer_choice;
@@ -154,40 +137,27 @@ function rpsls_game(player_name) {
     $("#gameplay h2").text("The computer chose " + computer_choice + ".");
 
     // compute difference between computer_number and player_number modulo 5
-
-// Unlike Python, JavaScript does not have a true modular operator. Instead, you have to do use this formula:  [Dividend-{Math.floor(Dividend/Divisor)*Divisor}]
-
     difference = ((player_number-computer_number)-(Math.floor((player_number-computer_number)/5)*5));
-
     number_of_games +=1;
-    console.log("RESULTS OF GAME #" + number_of_games + ":");
+  
 // determine winner, output winner message
     var outcome = $('.outcome h2');
     var wins = $('.wins h2');
     var losses = $('.losses h2');
     if (difference === 1 || difference === 2) {
-        console.log("Player wins!");
         player_score += 1;
         outcome.html("You win! " + player_name + " beats " + computer_choice + "!");
         wins.html(player_score);
         losses.html(computer_score);
-        console.log("Player Score: " + player_score);
-        console.log("Computer Score: " + computer_score);
-        console.log("\n");
 
     } else if (difference === 3 || difference === 4) {
-        console.log("Computer wins!");
         computer_score +=1;
         outcome.html("Computer wins! " + computer_choice + " beats " + player_name + "!");
         wins.html(player_score);
         losses.html(computer_score);
-        console.log("Player Score: " + player_score);
-        console.log("Computer Score: " + computer_score);
-        console.log("\n");
+
     } else {
         outcome.html("No one wins. Try again!");
-        console.log("Player and computer tie.");
-        console.log("\n");
     }
 
     // reset game scores
