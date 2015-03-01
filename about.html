@@ -36,44 +36,32 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-
   <div id="header">
     <img src="images/header.png" alt="Rock Paper Scissors Lizard Spock">
-    <a id="rules" class="button" href="images/rules.png">How to Play</a>
-    <a id="about" class="button" href="about.html">About Us</a>
+    <a class="button" href="index.html">Go Back</a>
   </div>
 
-
-  <div id="gameplay">
-    <h1>Choose your weapon!</h1>
-    <div id="choice">
-      <ul>
-        <li id="rock"><a href="javascript:void(0);"><img src="images/icon-rock.png" alt="Rock"></a></li>
-        <li id="paper"><a href="javascript:void(0);"><img src="images/icon-paper.png" alt="Paper"></a></li>
-        <li id="scissors"><a href="javascript:void(0);"><img src="images/icon-scissors.png" alt="Scissors"></a></li>
-        <li id="lizard"><a href="javascript:void(0);"><img src="images/icon-lizard.png" alt="Lizard"></a></li>
-        <li id="spock"><a href="javascript:void(0);"><img src="images/icon-spock.png" alt="Spock"></a></li>
-      </ul>
+  <div id="about-wrapper">
+    <div id="about-game">
+      <h1>About The Game</h1>
+      <p>Rock, Paper, Scissors, Lizard, Spock is a variant of the zero sum hand game <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors">Rock, Paper, Scissors</a>. It was created by <a href="http://www.samkass.com/theories/RPSSL.html">Sam Kass and Karen Bryla</a>. Adding two more options reduces the probability that the game will result in a tie.</p>
+      <p>Rock Paper Scissors Lizard Spock by Sam Kass and Karen Bryla is licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
     </div>
-    <h2></h2>
-    <div class="outcome">
-      <h2></h2>
+
+    <div id="about-project">
+      <h1>About This Project</h1>
+      <p>We started this project as a way to learn how to work collaboratively on GitHub. Tree had coded the game in Python which ran only in the terminal as part of the <a href="https://www.coursera.org/course/interactivepython1">Coursera Interactive Programming in Python</a> course. We decided to take this code and turn it into a web application.</p>
+      <p>Read more about our <a href="https://github.com/treecasiano/rpsls-js">project on GitHub.</a></p>
+    </div>
+
+    <div id="about-us">
+      <h1>About Us</h1>
+      <p>We are <a href="http://www.kerinicole.com">Keri Nicole</a>, <a href="http://www.treecasiano.com">Tree Casiano</a>, and Jackson Stokes. We are all part of the <a href="http://www.codeoregon.org">Code Oregon</a> workforce training program.</p>
+      <p></p>
     </div>
   </div>
 
-  <div id=reset>
-    <a class="reset button">Reset Scores</a>
-  </div>
-
-  <div id="score">
-    <div class="wins">
-      <h1>You</h1>
-      <h2>0</h2>
-    </div>
-    <div class="losses">
-      <h1>Computer</h1>
-      <h2>0</h2>
-    </div>
+  <div id="about-bgbar">
   </div>
 
 <script src="js/app.js"></script>
