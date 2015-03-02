@@ -278,21 +278,55 @@ body {
 	}
 
 	#gameplay {
-		height: 460px;
-		width: 100%;
+		height: 520px;
+		width: 80%;
 		border: 10px solid #BCC98E;
-		padding: 30px 30px;
+		padding: 10px 30px;
 	}
 
 	#about-text {
-		width: 100%;
+		width: 80%;
 		border: 10px solid #BCC98E;
 	}
 
 	#score {
+		background-color: transparent;
 		height: 140px;
-		position: auto;
-		top: auto;
+		z-index: 1;
+	}
+
+	#reset {
+		height: 40px;
+	}
+
+	#choice ul {
+		margin: 20px 0;
+	}
+
+	.reset {
+		position: relative;
+		top: -64px;
+		z-index: 2;
+	}
+
+	.wins {
+		height: 100px;
+		width: 110px;
+		top: 80px;
+	}
+
+	.wins h1 {
+		font-size: 1.2em;
+	}
+
+	.losses {
+		height: 100px;
+		width: 110px;
+		top: 80px;
+	}
+
+	.losses h1 {
+		font-size: 1.2em;
 	}
 }
 
@@ -344,11 +378,22 @@ body {
 
 	#about-text {
 		width: 70%;
+		top: -100px;
+		padding: 0 30px;
 	}
 
 	#reset {
 		margin-bottom: 10px;
 		height: 26px;
+	}
+
+	.reset {
+		position: relative;
+		top: -8px;
+	}
+
+	#about-bgbar {
+		top: -200px;
 	}
 
 	.button {
