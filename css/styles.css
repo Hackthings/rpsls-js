@@ -279,13 +279,13 @@ body {
 
 	#gameplay {
 		height: 460px;
-		width: 500px;
+		width: 100%;
 		border: 10px solid #BCC98E;
 		padding: 30px 30px;
 	}
 
 	#about-text {
-		width: 500px;
+		width: 100%;
 		border: 10px solid #BCC98E;
 	}
 
@@ -299,21 +299,64 @@ body {
 /* Really small screens */
 @media only screen and (max-width: 560px) {
 
+	#header img {
+		margin: 10px auto;
+	}
+
 	#score {
 		background-color: transparent;
+		top: -122px;
+		height: 68px;
 	}
 
 	#gameplay {
-		height: 600px;
-		width: 360px;
+		height: 320px;
+		width: 80%;
+		padding: 10px;
+		top: -100px;
 	}
 
 	#gameplay h1 {
-		font-size: 1.5em;
+		font-size: 1.2em;
+	}
+
+	#gameplay h2 {
+		font-size: 1.2em;
+	}
+
+	#choice {
+		padding: 0;
+	}
+
+	#choice ul {
+		margin: 0;
+	}
+
+	#choice img {
+		height: 72px;
+		width: 72px;
+	}
+
+	#choice ul li {
+		height: 72px;
+		width: 72px;
 	}
 
 	#about-text {
-		width: 360px;
+		width: 70%;
+	}
+
+	#reset {
+		margin-bottom: 10px;
+		height: 26px;
+	}
+
+	.button {
+		height: 26px;
+		line-height: 26px;
+	  width: 110px;
+	  padding: 0 6px;
+		font-size: 10px;
 	}
 
 	.outcome {
@@ -331,7 +374,7 @@ body {
 		left: 0;
 		bottom: 0;
 		top: auto;
-		height: 160px;
+		height: 68px;
 		width: 50%;
 		text-align: center;
 		box-shadow: none;
@@ -339,7 +382,14 @@ body {
 	}
 
 	.wins h1 {
+		margin: 8px 0;
 		background-color: #638270;
+		font-size: 1.2em;
+	}
+
+	.wins h2 {
+		margin: 8px 0;
+		font-size: 1.2em;
 	}
 
 	.losses {
@@ -348,7 +398,7 @@ body {
 		right: 0;
 		bottom: 0;
 		top: auto;
-		height: 160px;
+		height: 68px;
 		width: 50%;
 		text-align: center;
 		box-shadow: none;
@@ -356,6 +406,13 @@ body {
 	}
 
 	.losses h1 {
+		margin: 8px 0;
 		background-color: #638270;
+		font-size: 1.2em;
+	}
+
+	.losses h2 {
+		margin: 8px 0;
+		font-size: 1.2em;
 	}
 }
