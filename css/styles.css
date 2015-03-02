@@ -254,14 +254,29 @@ body {
 		width: 600px;
 	}
 
+	#gameplay {
+		height: 400px;
+		width: 80%;
+	}
+
 	#about-text {
-		width: 660px;
+		width: 80%;
 	}
 
 	#score {
 		height: 140px;
-		position: auto;
-		top: auto;
+		position: relative;
+		top: -50px;
+	}
+
+	#choice img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.reset {
+		position: relative;
+		top: 30px;
 	}
 }
 
@@ -281,7 +296,7 @@ body {
 		height: 520px;
 		width: 80%;
 		border: 10px solid #BCC98E;
-		padding: 10px 30px;
+		padding: 10px 10px;
 	}
 
 	#about-text {
