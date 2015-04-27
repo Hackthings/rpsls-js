@@ -147,6 +147,8 @@ body {
 #overlay img {
 	margin-top: 160px;
 	border: 40px solid #242424;
+	max-width: 50%;
+	max-height: 50%;
 	border-radius: 10px;
 }
 
