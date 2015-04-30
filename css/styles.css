@@ -12,14 +12,14 @@ body {
 .button {
   display: inline-block;
   margin: 0 10px;
-  height: 38px;
+  height: 26px;
   width: 160px;
-  padding: 0 30px;
+  padding: 0 6px;
   color: #242424;
   text-align: center;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 26px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -34,22 +34,21 @@ body {
 .button:hover {
   color: #333;
   border-color: #888;
-  outline: 0;
 }
 
-/* Choice Buttons
+/* Choice Icons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #choice {
 	display: inline;
-	height: 140px;
-	width: 100%;
+	/*height: 140px;*/
+	max-width: 100%;
 	text-align: center;
 	padding: 0;
 }
 
 #choice ul {
-	margin: 50px 0;
+	margin: 20px 0;
 	list-style: none;
 	padding: 0;
 }
@@ -57,41 +56,49 @@ body {
 #choice ul li {
 	display: inline-block;
 	padding: 6px;
+	max-height: 72px;
+		max-width: 72px;
 }
 
 #choice ul li img {
 	vertical-align: middle;
 }
 
+#choice img {
+	max-height: 72px;
+	max-width: 72px;
+}
+
 .selected {
 	box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+/*  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;*/
   border: 1px solid #242424;
 	border-radius: 100px;
 	background-color: #638270;
 }
 
-
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #header {
-	margin: 0;
+	margin: auto;
 	display: inline-block;
 	text-align: center;
-	height: 235px;
+	padding-bottom: 50px;
+	/*height: 235px;*/
 	width: 100%;
 	background-color: #0C2538;
 	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #header img {
 	display: block;
 	margin: 20px auto 20px auto;
+	max-width: 80%;
 }
 
 /* Gameplay Window
@@ -99,36 +106,41 @@ body {
 
 #gameplay {
 	background-color: #0C2538;
-	height: 380px;
-	width: 800px;
-	margin: 0 auto;
-	padding: 30px 30px 30px 30px;
+	height: 320px;
+	max-width: 80%;
+	margin: auto;
+	padding: 10px;
 	position: relative;
-	top: -40px;
 	text-align: center;
-	border: 20px solid #BCC98E;
+	border: 10px solid #BCC98E;
 	border-radius: 10px;
 	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+#gameplay h1, h2 {
+	font-size: 1.25em;
+}
 #gameplay ul img:hover {
 	/* 50% black box shadow */
 	border-radius: 100px;
-	-webkit-box-shadow: 0px 0px 50px 6px rgba(99, 130, 112, 0.75);
-	-moz-box-shadow: 0px 0px 50px 6px rgba(99, 130, 112, 0.75);
-	box-shadow: 0px 0px 50px 6px rgba(99, 130, 112, 0.75);
+	-webkit-box-shadow: 0 0 50px 6px rgba(99, 130, 112, 0.75);
+	-moz-box-shadow: 0 0 50px 6px rgba(99, 130, 112, 0.75);
+	box-shadow: 0 0 50px 6px rgba(99, 130, 112, 0.75);
 }
 
+/*ICONS*/
+
 #reset {
-	margin: 0;
+	margin: 10px;
 	display: inline-block;
 	text-align: center;
-	height: 100px;
+	height: 26px;
 	width: 100%;
 }
+
 
 /* How to Play Lightbox Overlay
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -147,8 +159,8 @@ body {
 #overlay img {
 	margin-top: 160px;
 	border: 40px solid #242424;
-	max-width: 50%;
-	max-height: 50%;
+	max-width: 75%;
+	max-height: 75%;
 	border-radius: 10px;
 }
 
@@ -161,41 +173,77 @@ body {
 	height: 180px;
 	width: 100%;
 	position: relative;
-	top: -200px;
 	z-index: -1;
-	background-color: #0C2538;
+	background-color: transparent;
+}
+
+.wins, .losses {
+	background-color: #638270;
+	color: #242424;
+	position: relative;
+	top: -60px;
+	max-height: 140px;
+	max-width: 200px;
+	text-align: center;
+	/* 50% black box shadow */
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .wins {
-	background-color: #638270;
-	color: #242424;
-	border-radius: 0 10px 10px 0;
-	position: relative;
-	top: -60px;
-	height: 140px;
-	width: 200px;
 	float: left;
+	position: relative;
+	background-color: #BCC98E;
+	left: 0;
+	bottom: 0;
+	top: auto;
+	height: 68px;
+	width: 50%;
 	text-align: center;
-	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: none;
+}
+
+.wins h1 {
+	margin: 8px 0;
+	background-color: #638270;
+	font-size: 1.2em;
+}
+
+.wins h2 {
+	margin: 8px 0;
+	font-size: 1.2em;
 }
 
 .losses {
-	background-color: #638270;
-	color: #242424;
-	border-radius: 10px 0 0 10px;
-	position: relative;
-	top: -60px;
-	height: 140px;
-	width: 200px;
 	float: right;
+	position: relative;
+	background-color: #BCC98E;
+	right: 0;
+	bottom: 0;
+	top: auto;
+	height: 68px;
+	width: 50%;
 	text-align: center;
-	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.losses h1 {
+	margin: 8px 0;
+	background-color: #638270;
+	font-size: 1.2em;
+}
+
+.losses h2 {
+	margin: 8px 0;
+	font-size: 1.2em;
+}
+
+.outcome {
+	text-align: center;
+	margin: 10px;
+	font-size: 12px;
 }
 
 /* About Page
@@ -207,21 +255,21 @@ body {
 
 #about-text {
 	display: inline-block;
-	margin: 0 20px;
+	width: 80%;
+	margin: 20px;
 	background-color: #0C2538;
-	width: 900px;
+	max-width: 900px;
 	margin: 0 auto;
-	padding: 30px 30px 30px 30px;
+	padding: 30px;
 	position: relative;
-	top: -40px;
 	line-height: 1.5;
 	text-align: center;
-	border: 20px solid #BCC98E;
+	border: 10px solid #BCC98E;
 	border-radius: 10px;
 	/* 50% black box shadow */
-	-webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 #about-text a {
@@ -230,251 +278,24 @@ body {
 	text-decoration: none;
 }
 
-#about-text h1:nth-child(4) {
+#about-bgbar {
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	z-index: -1;
+	background-color: #0C2538;
+}
+
+
+/*#about-text h1:nth-child(4) {
 	margin-top: 60px;
 }
 
 #about-text h1:nth-child(6) {
 	margin-top: 60px;
-}
+}*/
 
-#about-bgbar {
-	margin: 0;
-	text-align: center;
-	height: 180px;
-	width: 100%;
-	position: relative;
-	top: -100px;
-	z-index: -1;
-	background-color: #0C2538;
-}
 
-/* Medium screens */
-@media only screen and (max-width: 1279px) and (min-width: 768px) {
 
-	#header img {
-		width: 600px;
-	}
 
-	#gameplay {
-		height: 400px;
-		width: 80%;
-	}
-
-	#about-text {
-		width: 80%;
-	}
-
-	#score {
-		height: 140px;
-		position: relative;
-		top: -50px;
-	}
-
-	#choice img {
-		height: 100px;
-		width: 100px;
-	}
-
-	.reset {
-		position: relative;
-		top: 30px;
-	}
-}
-
-/* Small screens */
-@media only screen and (max-width: 767px) {
-
-	#header {
-		height: 200px;
-	}
-
-	#header img {
-		width: 80%;
-		min-width: 320px;
-	}
-
-	#gameplay {
-		height: 520px;
-		width: 80%;
-		border: 10px solid #BCC98E;
-		padding: 10px 10px;
-	}
-
-	#about-text {
-		width: 80%;
-		border: 10px solid #BCC98E;
-	}
-
-	#score {
-		background-color: transparent;
-		height: 140px;
-		z-index: 1;
-	}
-
-	#reset {
-		height: 40px;
-	}
-
-	#choice ul {
-		margin: 20px 0;
-	}
-
-	.reset {
-		position: relative;
-		top: -64px;
-		z-index: 2;
-	}
-
-	.wins {
-		height: 100px;
-		width: 110px;
-		top: 80px;
-	}
-
-	.wins h1 {
-		font-size: 1.2em;
-	}
-
-	.losses {
-		height: 100px;
-		width: 110px;
-		top: 80px;
-	}
-
-	.losses h1 {
-		font-size: 1.2em;
-	}
-}
-
-/* Really small screens */
-@media only screen and (max-width: 560px) {
-
-	#header img {
-		margin: 10px auto;
-	}
-
-	#score {
-		background-color: transparent;
-		top: -122px;
-		height: 68px;
-	}
-
-	#gameplay {
-		height: 320px;
-		width: 80%;
-		padding: 10px;
-		top: -100px;
-	}
-
-	#gameplay h1 {
-		font-size: 1.2em;
-	}
-
-	#gameplay h2 {
-		font-size: 1.2em;
-	}
-
-	#choice {
-		padding: 0;
-	}
-
-	#choice ul {
-		margin: 0;
-	}
-
-	#choice img {
-		height: 72px;
-		width: 72px;
-	}
-
-	#choice ul li {
-		height: 72px;
-		width: 72px;
-	}
-
-	#about-text {
-		width: 70%;
-		top: -100px;
-		padding: 0 30px;
-	}
-
-	#reset {
-		margin-bottom: 10px;
-		height: 26px;
-	}
-
-	.reset {
-		position: relative;
-		top: -8px;
-	}
-
-	#about-bgbar {
-		top: -200px;
-	}
-
-	.button {
-		height: 26px;
-		line-height: 26px;
-	  width: 110px;
-	  padding: 0 6px;
-		font-size: 10px;
-	}
-
-	.outcome {
-		text-align: center;
-	}
-
-	.outcome h2 {
-		margin-top: 10px;
-		text-align: center;
-	}
-
-	.wins {
-		position: relative;
-		background-color: #BCC98E;
-		left: 0;
-		bottom: 0;
-		top: auto;
-		height: 68px;
-		width: 50%;
-		text-align: center;
-		box-shadow: none;
-		border-radius: 0;
-	}
-
-	.wins h1 {
-		margin: 8px 0;
-		background-color: #638270;
-		font-size: 1.2em;
-	}
-
-	.wins h2 {
-		margin: 8px 0;
-		font-size: 1.2em;
-	}
-
-	.losses {
-		position: relative;
-		background-color: #BCC98E;
-		right: 0;
-		bottom: 0;
-		top: auto;
-		height: 68px;
-		width: 50%;
-		text-align: center;
-		box-shadow: none;
-		border-radius: 0;
-	}
-
-	.losses h1 {
-		margin: 8px 0;
-		background-color: #638270;
-		font-size: 1.2em;
-	}
-
-	.losses h2 {
-		margin: 8px 0;
-		font-size: 1.2em;
-	}
-}
