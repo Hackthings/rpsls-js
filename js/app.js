@@ -90,7 +90,7 @@ function name_to_number(player_name){
   } else if (player_name === "scissors") {
       player_name = 4;
       return player_name;
-  } 
+  }
 }
 
   // convert computer's number to a name
@@ -113,7 +113,7 @@ function number_to_name(computer_number){
     } else if (computer_number === 4){
         computer_name = "scissors";
         return computer_name;
-    } 
+    }
 }
 
 // GAME CODE
@@ -133,13 +133,12 @@ function rpsls_game(player_name) {
     computer_choice = number_to_name(computer_number);
 
     // output the message for computer's choice
-    console.log("Computer chooses " + computer_choice + ".");
     $("#gameplay h2").text("The computer chose " + computer_choice + ".");
 
     // compute difference between computer_number and player_number modulo 5
     difference = ((player_number-computer_number)-(Math.floor((player_number-computer_number)/5)*5));
     number_of_games +=1;
-  
+
 // determine winner, output winner message
     var outcome = $('.outcome h2');
     var wins = $('.wins h2');
