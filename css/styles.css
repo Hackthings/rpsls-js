@@ -7,6 +7,7 @@ body {
 	background-color: #263B45;
 	height: 100%;
 	color: #FFF;
+	box-sizing: border-box;
 }
 
 .button {
@@ -28,7 +29,6 @@ body {
   border-radius: 4px;
   border: 1px solid #242424;
   cursor: pointer;
-  box-sizing: border-box;
 }
 
 .button:hover {
@@ -70,7 +70,6 @@ body {
 }
 
 .selected {
-	box-sizing: border-box;
 /*  	-moz-box-sizing: border-box;
   	-webkit-box-sizing: border-box;*/
   border: 1px solid #242424;
@@ -146,14 +145,14 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #overlay {
-  	background: rgba(0,0,0,0.7);
-  	width: 100%;
-  	height: 100%;
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	display: none;
-  	text-align: center;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	text-align: center;
 }
 
 #overlay img {
@@ -255,11 +254,9 @@ body {
 
 #about-text {
 	display: inline-block;
-	width: 80%;
-	margin: 20px;
+	max-width: 70%;
 	background-color: #0C2538;
-	max-width: 900px;
-	margin: 0 auto;
+	margin: 10px auto;
 	padding: 30px;
 	position: relative;
 	line-height: 1.5;
@@ -278,23 +275,7 @@ body {
 	text-decoration: none;
 }
 
-#about-bgbar {
-	margin: 0;
-	text-align: center;
-	width: 100%;
-	position: relative;
-	z-index: -1;
-	background-color: #0C2538;
-}
 
-
-/*#about-text h1:nth-child(4) {
-	margin-top: 60px;
-}
-
-#about-text h1:nth-child(6) {
-	margin-top: 60px;
-}*/
 
 
 
