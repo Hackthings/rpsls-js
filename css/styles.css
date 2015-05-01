@@ -40,8 +40,6 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #choice {
-	display: inline;
-	/*height: 140px;*/
 	max-width: 100%;
 	text-align: center;
 	padding: 0;
@@ -172,7 +170,6 @@ body {
 	height: 180px;
 	width: 100%;
 	position: relative;
-	z-index: -1;
 	background-color: transparent;
 }
 
@@ -275,6 +272,42 @@ body {
 	text-decoration: none;
 }
 
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 1025px) {
+
+	#choice {
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+	#choice li {
+		margin: 20px 30px 10px 30px;
+
+	}
+
+
+	#choice img {
+		max-width: 100px;
+		max-height: 100px;
+
+
+	}
+
+	#gameplay h2 {
+		padding-top: 35px;
+		padding-bottom: -15px;
+		margin-bottom: -15px;
+	}
+
+	.outcome {
+		padding-bottom: 15px;
+		margin-top: 0;
+
+	}
+
+}
 
 
 
