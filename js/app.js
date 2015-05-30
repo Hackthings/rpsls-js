@@ -37,8 +37,8 @@ $overlay.click(function() {
 var player_name = "";
 
 function start_game(player_name){
-    $("li").removeClass("selected")
-    $(this).addClass("selected")
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
     $("#gameplay h1").text("You have chosen " + player_name + ".");
     rpsls_game(player_name);
 }
@@ -168,7 +168,7 @@ function rpsls_game(player_name) {
         $("#gameplay h1").text("Choose your weapon!");
         $("#gameplay h2").text("");
         outcome.html("");
-        $("li").removeClass("selected")
+        $("li").removeClass("selected");
         wins.html(player_score);
         losses.html(computer_score);
     });
