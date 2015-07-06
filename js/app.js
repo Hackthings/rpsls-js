@@ -1,16 +1,14 @@
-//global functions
+//global variables
 var number_of_games = 0;
 var player_score = 0;
 var computer_score = 0;
-
+var player_choice = "";
 
 // "How to Play" Lightbox Display
-
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 
 $overlay.append($image);
-
 $("body").append($overlay);
 
 // Capture click event on "How to Play" button
@@ -28,76 +26,76 @@ $overlay.click(function() {
   $overlay.hide();
 });
 
-
 // ROCK PAPER LIZARD SCISSORS SPOCK GAME
 // (Player vs. Computer)
 
-//  convert button click to player's choice (player_name)
-
-var player_name = "";
-
-function start_game(player_name){
-    $("li").removeClass("selected");
-    $(this).addClass("selected");
-    $("#gameplay h1").text("You have chosen " + player_name + ".");
-    rpsls_game(player_name);
+// convert button click to player's choice (player_choice)
+function start_turn(player_choice){
+    $("#gameplay h1").text("You have chosen " + player_choice + ".");
+    rpsls_game(player_choice);
 }
 
 // event listeners trigger game
   $('#rock').click(function(){
-    player_name = "rock";
-    start_game(player_name);
+    player_choice = "rock";
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+    start_turn(player_choice);
   });
 
   $('#paper').click(function(){
-    player_name = "paper";
-    start_game(player_name);
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+    player_choice = "paper";
+    start_turn(player_choice);
   });
 
   $('#scissors').click(function(){
-    player_name = "scissors";
-    start_game(player_name);
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+    player_choice = "scissors";
+    start_turn(player_choice);
   });
 
   $('#lizard').click(function(){
-    player_name = "lizard";
-    start_game(player_name);
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+    player_choice = "lizard";
+    start_turn(player_choice);
   });
 
   $('#spock').click(function(){
-    player_name = "Spock";
-    start_game(player_name);
+    $("li").removeClass("selected");
+    $(this).addClass("selected");
+    player_choice = "Spock";
+    start_turn(player_choice);
   });
 
 // HELPER FUNCTIONS
 
   // convert player's choice name to a number
-
-function name_to_number(player_name){
-
-    if(player_name === "rock") {
-      player_name = 0;
-      return player_name;
-  } else if (player_name === "Spock") {
-      player_name = 1;
-      return player_name;
-  } else if (player_name === "paper") {
-      player_name = 2;
-      return player_name;
-  } else if (player_name === "lizard") {
-      player_name = 3;
-      return player_name;
-  } else if (player_name === "scissors") {
-      player_name = 4;
-      return player_name;
+function name_to_number(player_choice){
+    if(player_choice === "rock") {
+      player_choice = 0;
+      return player_choice;
+  } else if (player_choice === "Spock") {
+      player_choice = 1;
+      return player_choice;
+  } else if (player_choice === "paper") {
+      player_choice = 2;
+      return player_choice;
+  } else if (player_choice === "lizard") {
+      player_choice = 3;
+      return player_choice;
+  } else if (player_choice === "scissors") {
+      player_choice = 4;
+      return player_choice;
   }
 }
 
   // convert computer's number to a name
 function number_to_name(computer_number){
-
     var computer_name;
-
     if (computer_number === 0) {
       computer_name = "rock";
       return computer_name;
@@ -118,13 +116,13 @@ function number_to_name(computer_number){
 
 // GAME CODE
 
-function rpsls_game(player_name) {
+function rpsls_game(player_choice) {
     var computer_choice;
     var difference;
     var player_number;
 
-    // convert player's choice (player_name) to player_number using the function name_to_number()
-    player_number = name_to_number(player_name);
+    // convert player's choice (player_choice) to player_number using the function name_to_number()
+    player_number = name_to_number(player_choice);
 
     // compute random guess for computer_number using random.randrange()
     var computer_number = Math.floor(Math.random(0, 5) * 5);
@@ -145,13 +143,13 @@ function rpsls_game(player_name) {
     var losses = $('.losses h2');
     if (difference === 1 || difference === 2) {
         player_score += 1;
-        outcome.html("You win! " + player_name.charAt(0).toUpperCase() + player_name.slice(1) + " beats " + computer_choice + "!");
+        outcome.html("You win! " + player_choice.charAt(0).toUpperCase() + player_choice.slice(1) + " beats " + computer_choice + "!");
         wins.html(player_score);
         losses.html(computer_score);
 
     } else if (difference === 3 || difference === 4) {
         computer_score +=1;
-        outcome.html("Computer wins! " + computer_choice.charAt(0).toUpperCase() + computer_choice.slice(1) + " beats " + player_name + "!");
+        outcome.html("Computer wins! " + computer_choice.charAt(0).toUpperCase() + computer_choice.slice(1) + " beats " + player_choice + "!");
         wins.html(player_score);
         losses.html(computer_score);
 
@@ -160,7 +158,6 @@ function rpsls_game(player_name) {
     }
 
     // reset game scores
-
     $('.reset').click(function() {
         number_of_games = 0;
         player_score = 0;
